@@ -1,6 +1,8 @@
-import { Body, Controller, Get, Patch, Post } from '@nestjs/common';
-import { OperationException } from 'src/exceptions/bad-request-exceptions';
-import { ProjectService } from 'src/service/project.service';
+import { Body, Controller, Get, Patch, Post, UseGuards } from '@nestjs/common';
+import { Roles } from 'src/decorator/roles.decorator';
+import { OperationException } from 'src/exceptions/bad-request.exception';
+import { RolesGuard } from 'src/guards/roles.guard';
+import { ProjectService } from 'src/services/project.service';
 
 @Controller('project')
 export class ProjectController {
@@ -11,6 +13,8 @@ export class ProjectController {
     return this.projectService.getProject();
   }
   //para crear la info
+  @UseGuards(RolesGuard)
+  @Roles('Admin')
   @Post()
   createProject(@Body() project) {
     try {
@@ -20,6 +24,8 @@ export class ProjectController {
     }
   }
   //para editar la info
+  @UseGuards(RolesGuard)
+  @Roles('Admin')
   @Patch()
   editProfileInfo(@Body() editedInfo) {
     try {

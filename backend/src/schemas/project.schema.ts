@@ -8,14 +8,14 @@ export class Project extends Document {
 
   @Prop({ required: true })
   summary: string;
-  
+
   @Prop({ required: true })
   language: string;
 
   @Prop({ required: true })
-  github: string; 
+  github: string;
 
-  @Prop ()
+  @Prop()
   url: string;
 }
 

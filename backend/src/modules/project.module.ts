@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Project, ProjectSchema } from 'src/schemas/project.schema';
 import { ProjectController } from 'src/controllers/project.controllers';
-import { ProjectService } from 'src/service/project.service';
+import { ProjectService } from 'src/services/project.service';
 
 @Module({
   //agregamos el módulo

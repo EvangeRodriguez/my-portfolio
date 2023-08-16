@@ -5,11 +5,14 @@ import { Project } from 'src/schemas/project.schema';
 
 @Injectable()
 export class ProjectService {
-  constructor(@InjectModel(Project.name) projectModel: Model<Project>) {}
+  constructor(
+    @InjectModel(Project.name) private projectModel: Model<Project>,
+  ) {}
 
   async getProject(): Promise<Project> {
     const project = await this.projectModel.findOne().exec();
     if (!project) {
+      console.log('información del proyecto no existe')
       throw new NotFoundException('Información del proyecto no existe.');
     }
     return project;
