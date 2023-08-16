@@ -1,7 +1,7 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-@Schema() // Decorador para indicar que esta clase es un schema de mongoose
+@Schema()
 export class ProfileInfo extends Document {
   @Prop({ required: true })
   name: string;

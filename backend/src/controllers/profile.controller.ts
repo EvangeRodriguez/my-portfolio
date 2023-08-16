@@ -12,8 +12,8 @@ export class ProfileController {
   getProfileInfo() {
     return this.profileService.getProfileInfo();
   }
-  //para crear la info
 
+  //para crear la info
   @UseGuards(RolesGuard)
   @Roles('Admin')
   @Post()
@@ -24,6 +24,7 @@ export class ProfileController {
       throw new OperationException('No se pudo crear el perfil');
     }
   }
+
   //para editar la info
   @UseGuards(RolesGuard)
   @Roles('Admin')

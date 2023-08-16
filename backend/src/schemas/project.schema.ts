@@ -10,7 +10,7 @@ export class Project extends Document {
   summary: string;
 
   @Prop({ required: true })
-  language: string;
+  technology: string;
 
   @Prop({ required: true })
   github: string;

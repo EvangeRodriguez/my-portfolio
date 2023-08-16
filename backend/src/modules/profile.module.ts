@@ -17,7 +17,7 @@ import { AdminModule } from './admin.module';
       secret: process.env.JWT_SECRET,
       signOptions: { expiresIn: '1h' },
     }),
-    AdminModule, // Si es necesario debido a la dependencia
+    AdminModule,
   ],
   controllers: [ProfileController],
   providers: [ProfileService, AuthService, RolesGuard],

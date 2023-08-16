@@ -12,6 +12,7 @@ export class ProjectController {
   getProfileInfo() {
     return this.projectService.getProject();
   }
+
   //para crear la info
   @UseGuards(RolesGuard)
   @Roles('Admin')
@@ -23,6 +24,7 @@ export class ProjectController {
       throw new OperationException('No se pudo crear el proyecto');
     }
   }
+
   //para editar la info
   @UseGuards(RolesGuard)
   @Roles('Admin')

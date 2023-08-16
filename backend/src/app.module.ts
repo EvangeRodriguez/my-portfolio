@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ProfileModule } from './modules/profile.module';
 import { AuthModule } from './modules/auth.module';
 import { AdminModule } from './modules/admin.module';
+import { ProjectModule } from './modules/project.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { AdminModule } from './modules/admin.module';
     AdminModule,
     AuthModule,
     ProfileModule,
+    ProjectModule,
   ],
   controllers: [],
   providers: [],
