@@ -4,15 +4,15 @@ body {
   box-sizing: border-box;
   text-transform: none;
   overflow: hidden;
-  background-image: url('./assets/fondo.jpg');
+  background-image: url('./assets/fondoHome.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  /* Ajustar la posición vertical de la imagen de fondo para que comience más desde abajo */
+  background-position: center bottom; /* Puedes ajustar los valores según tus necesidades */
 }
+
 :root {
   font-family: 'Roboto Mono', monospace;
 }
-  
- 
- 

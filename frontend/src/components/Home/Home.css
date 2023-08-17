@@ -1,0 +1,36 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card-link {
+    text-decoration: none;
+  }
+  
+  .profile-card,
+  .project-card {
+    width: 500px; /* Aumentado el ancho de las tarjetas */
+    background-color: #FCEEEE;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .profile-card .ant-card-meta-title,
+  .project-card .ant-card-meta-title {
+    color: #DB888A;
+    font-size: 30px; /* Aumentado el tamaño del texto */
+  }
+  
+  .project-card .ant-card-meta-title {
+    color: #8CA0C8;
+  }
+  
+  .profile-card:hover,
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
