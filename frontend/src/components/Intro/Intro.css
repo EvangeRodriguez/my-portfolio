@@ -1,0 +1,69 @@
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+}
+
+.eva, .dev {
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Roboto Mono', monospace;
+  width: 100%; 
+  }
+
+.eva {
+  color: #8CA0C8;
+  margin-right: 8px; 
+  font-size: 70px;
+}
+
+.dev {
+  color: #DB888A;
+  margin-right: 8px; 
+  font-size: 45px;
+}
+
+/* Animación de la máquina de escribir letra por letra */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Estilo de la animación para .eva y .dev */
+.eva .typing-animation, .dev .typing-animation {
+  animation: typing 4s steps(40);
+}
+
+/* Estilo de la animación de intermitencia */
+@keyframes blink-caret {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Aplicamos la animación de intermitencia al cursor */
+.blink-caret  {
+  font-size: 50px;
+  color: bisque;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
