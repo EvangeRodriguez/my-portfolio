@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
   }
   
   .card-link {
@@ -23,6 +24,7 @@
   .project-card .ant-card-meta-title {
     color: #DB888A;
     font-size: 30px; /* Aumentado el tamaño del texto */
+    font-family: 'Roboto Mono', monospace;
   }
   
   .project-card .ant-card-meta-title {
