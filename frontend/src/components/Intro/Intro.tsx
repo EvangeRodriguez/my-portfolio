@@ -14,7 +14,7 @@ const Intro: React.FC = () => {
     };
 
     // Llamar a la función de simulación después de un tiempo (por ejemplo, 3 segundos)
-    const animationTimer = setTimeout(simulateAnimationEnd, 4000);
+    const animationTimer = setTimeout(simulateAnimationEnd, 6000);
 
     return () => {
       clearTimeout(animationTimer);
